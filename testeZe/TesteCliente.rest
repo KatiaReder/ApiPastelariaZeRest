@@ -1,0 +1,31 @@
+### Verbo GET - listar todos os clientes
+GET http://localhost:8000/cliente/ HTTP/1.1
+### Verbo GET - listar cliente por id
+GET http://localhost:8000/cliente/10 HTTP/1.1
+### Verbo POST - salvar cliente
+POST http://localhost:8000/cliente/ HTTP/1.1
+
+content-type: application/json
+{
+    "nome": "Abc 1",
+    "cpf": "12345678901",
+    "telefone": "12345678901",
+    "compra_fiado": 1,
+    "dia_fiado": 1,
+    "senha": "123456"
+}
+### Verbo PUT - atualizar cliente
+PUT http://localhost:8000/cliente/2 HTTP/1.1
+
+content-type: application/json
+{
+    "nome": "Abc 3",
+    "cpf": "11144885522",
+    "telefone": "125814141",
+    "compra_fiado": 2,
+    "dia_fiado": 2,
+    "senha": "123456"
+}
+### Verbo DELETE - deletar cliente
+DELETE http://localhost:8000/cliente/2 HTTP/1.1
+```
