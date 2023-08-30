@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from mod_cliente.Cliente import Cliente
+
 router = APIRouter()
 
 @router.get("/cliente/", tags=["Cliente"])

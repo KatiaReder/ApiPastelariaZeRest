@@ -6,6 +6,7 @@ GET http://localhost:8000/cliente/10 HTTP/1.1
 POST http://localhost:8000/cliente/ HTTP/1.1
 
 content-type: application/json
+
 {
     "nome": "Abc 1",
     "cpf": "12345678901",
