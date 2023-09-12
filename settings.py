@@ -9,6 +9,9 @@ HOST = os.getenv("HOST")
 PORT = os.getenv("PORT")
 RELOAD = os.getenv("RELOAD")
 
+X_TOKEN = os.getenv("X_TOKEN")
+X_KEY = os.getenv("X_KEY")
+
 DB_SGDB = os.getenv("DB_SGDB")
 DB_NAME = os.getenv("DB_NAME")
 
