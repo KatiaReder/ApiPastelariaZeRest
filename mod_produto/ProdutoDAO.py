@@ -1,10 +1,11 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+import security
 from mod_produto.Produto import Produto
 
 import db
 from mod_produto.ProdutoModel import ProdutoDB
 
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(security.verify_token), Depends(security.verify_key)])
 
 @router.get("/produto/", tags=["Produto"])
 def get_produto():
