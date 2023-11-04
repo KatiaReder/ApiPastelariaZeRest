@@ -68,7 +68,7 @@ def delete_produto(id: int):
         dados = session.query(ProdutoDB).filter(ProdutoDB.id_produto == id).one()
         session.delete(dados)
         session.commit()
-        return {"msg": "Registro excluído com sucesso"}, 200
+        return {"id": dados.id_produto, "msg": "Registro excluído com sucesso"}, 200
     except Exception as e:
         session.rollback()
         return {"erro": str(e)}, 400

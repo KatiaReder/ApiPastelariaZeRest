@@ -70,7 +70,7 @@ def delete_cliente(id: int):
     dados = session.query(ClienteDB).filter(ClienteDB.id_cliente == id).one()
     session.delete(dados)
     session.commit()
-    return {"msg": "Registro excluído com sucesso"}, 200
+    return {"id": dados.id_cliente, "msg": "Registro excluído com sucesso"}, 200
   except Exception as e:
     session.rollback()
     return {"erro": str(e)}, 400
